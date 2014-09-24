@@ -13,13 +13,13 @@ public class ValidationUtil {
 		"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 		+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-    private static final Pattern EMAIL_PATTERN =
-            Pattern.compile(EMAIL_PATTERN_STRING);
-    
     public static boolean verifyEmail(String email) {
         if (email == null) return false;
         return email.matches(EMAIL_PATTERN_STRING);
     }
+
+    private static final Pattern EMAIL_PATTERN =
+            Pattern.compile(EMAIL_PATTERN_STRING);
     
     public static boolean verifyEmail2(String email) {
         if (email == null) return false;
